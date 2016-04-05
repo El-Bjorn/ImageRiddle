@@ -4,7 +4,6 @@
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9530"/>
         <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
-        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
     </dependencies>
     <scenes>
         <!--View Controller-->
@@ -20,32 +19,30 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Drag Crosshairs to Select Solution" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Bou-b5-cIE">
-                                <rect key="frame" x="169" y="28" width="262" height="21"/>
+                                <rect key="frame" x="169" y="129" width="262" height="21"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <imageView contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="iNP-K5-X0V">
-                                <rect key="frame" x="76" y="70" width="449" height="394"/>
+                            <imageView contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" preservesSuperviewLayoutMargins="YES" layoutMarginsFollowReadableWidth="YES" translatesAutoresizingMaskIntoConstraints="NO" id="iNP-K5-X0V">
+                                <rect key="frame" x="147" y="175" width="306" height="250"/>
                                 <constraints>
-                                    <constraint firstAttribute="width" constant="449" id="2qA-hc-GHx"/>
-                                    <constraint firstAttribute="width" secondItem="iNP-K5-X0V" secondAttribute="height" multiplier="449:394" id="3OT-ad-Zxs"/>
-                                    <constraint firstAttribute="height" constant="394" id="g1Z-ee-xmw"/>
-                                    <constraint firstAttribute="width" secondItem="iNP-K5-X0V" secondAttribute="height" multiplier="449:394" id="iIu-kI-b0y"/>
+                                    <constraint firstAttribute="width" constant="504" id="J6l-CC-wE2"/>
+                                    <constraint firstAttribute="height" constant="250" id="LUo-Wg-EeD"/>
+                                    <constraint firstAttribute="width" secondItem="iNP-K5-X0V" secondAttribute="height" multiplier="168:137" id="dZY-qg-NW7"/>
                                 </constraints>
                                 <variation key="default">
                                     <mask key="constraints">
-                                        <exclude reference="2qA-hc-GHx"/>
-                                        <exclude reference="g1Z-ee-xmw"/>
+                                        <exclude reference="J6l-CC-wE2"/>
                                     </mask>
                                 </variation>
                             </imageView>
                             <button opaque="NO" contentMode="scaleAspectFit" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="mqz-Wa-yOg">
-                                <rect key="frame" x="228" y="483" width="145" height="30"/>
+                                <rect key="frame" x="166" y="440" width="269" height="30"/>
                                 <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 <constraints>
-                                    <constraint firstAttribute="height" constant="30" id="HJA-ss-MF0"/>
-                                    <constraint firstAttribute="width" constant="145" id="dxq-Zb-Dtm"/>
+                                    <constraint firstAttribute="height" constant="30" id="96I-Mk-4b8"/>
+                                    <constraint firstAttribute="width" constant="269" id="aCQ-eA-tAG"/>
                                 </constraints>
                                 <state key="normal" title="Done">
                                     <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
@@ -58,24 +55,17 @@
                         </subviews>
                         <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
-                            <constraint firstItem="iNP-K5-X0V" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="5" id="1Kg-DF-ChT"/>
-                            <constraint firstItem="iNP-K5-X0V" firstAttribute="centerX" secondItem="Bou-b5-cIE" secondAttribute="centerX" id="Jtn-qB-XzU"/>
-                            <constraint firstItem="Bou-b5-cIE" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="Ro4-Vk-XNZ"/>
-                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="mqz-Wa-yOg" secondAttribute="bottom" constant="87" id="UBr-wr-GoB"/>
-                            <constraint firstItem="Bou-b5-cIE" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="8" symbolic="YES" id="Ynu-fK-Ncn"/>
-                            <constraint firstItem="mqz-Wa-yOg" firstAttribute="centerX" secondItem="iNP-K5-X0V" secondAttribute="centerX" id="bsx-WD-aHt"/>
-                            <constraint firstItem="iNP-K5-X0V" firstAttribute="top" secondItem="Bou-b5-cIE" secondAttribute="bottom" constant="21" id="chB-02-2E6"/>
-                            <constraint firstItem="iNP-K5-X0V" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="5" id="dzu-Dz-zlA"/>
-                            <constraint firstAttribute="trailingMargin" relation="greaterThanOrEqual" secondItem="iNP-K5-X0V" secondAttribute="trailing" constant="5" id="grn-ue-4Bp"/>
-                            <constraint firstAttribute="trailingMargin" relation="greaterThanOrEqual" secondItem="iNP-K5-X0V" secondAttribute="trailing" constant="5" id="hK7-AF-Bvc"/>
-                            <constraint firstItem="iNP-K5-X0V" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="56" id="kGe-7q-UIc"/>
-                            <constraint firstItem="mqz-Wa-yOg" firstAttribute="top" secondItem="iNP-K5-X0V" secondAttribute="bottom" constant="19" id="tqr-8a-GEl"/>
+                            <constraint firstItem="mqz-Wa-yOg" firstAttribute="top" secondItem="iNP-K5-X0V" secondAttribute="bottom" constant="15" id="390-hh-9Wh"/>
+                            <constraint firstItem="iNP-K5-X0V" firstAttribute="top" secondItem="Bou-b5-cIE" secondAttribute="bottom" constant="25" id="EHm-gy-SLl"/>
+                            <constraint firstItem="mqz-Wa-yOg" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="K93-i3-OTn"/>
+                            <constraint firstItem="Bou-b5-cIE" firstAttribute="leading" secondItem="iNP-K5-X0V" secondAttribute="leading" id="RZC-hH-9xO"/>
+                            <constraint firstItem="Bou-b5-cIE" firstAttribute="centerX" secondItem="iNP-K5-X0V" secondAttribute="centerX" id="Tw3-sm-xQH"/>
+                            <constraint firstItem="iNP-K5-X0V" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="XXW-ae-wGq"/>
+                            <constraint firstItem="iNP-K5-X0V" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="oZp-Tq-hTg"/>
                         </constraints>
                         <variation key="default">
                             <mask key="constraints">
-                                <exclude reference="dzu-Dz-zlA"/>
-                                <exclude reference="hK7-AF-Bvc"/>
-                                <exclude reference="kGe-7q-UIc"/>
+                                <exclude reference="RZC-hH-9xO"/>
                             </mask>
                         </variation>
                     </view>

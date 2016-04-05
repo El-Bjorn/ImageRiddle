@@ -19,6 +19,7 @@ class TargetView: UIView {
         super.init(frame: frame)
         // set transparent, so we still see the image
         self.backgroundColor = UIColor.clearColor()
+        //self.alpha = 0.5
     }
     // Needed only to make xcode happy, we're using init(CGRect)
     required init?(coder aDecoder: NSCoder) {

@@ -20,6 +20,7 @@ class ViewController: UIViewController {
         super.viewDidLoad()
         // add the image to our UIImageView
         //self.riddleImageView.contentMode = UIViewContentMode.ScaleAspectFit
+        //self.riddleImageView.backgroundColor = UIColor.blueColor()
         self.riddleImageView.image = UIImage(named: "Seasame-St-Characters")
         //
         // create the TargetView and add it as a subview of riddleImageView
