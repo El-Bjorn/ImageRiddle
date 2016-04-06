@@ -11,8 +11,9 @@
 
 import UIKit
 
-let CROSSHAIRS_CIRCLE_SIZE: CGFloat = 10.0
-let CROSSHAIRS_SIZE: CGFloat = 20.0
+let CROSSHAIRS_CIRCLE_SIZE: CGFloat = 20.0
+let CROSSHAIRS_SIZE: CGFloat = 30.0
+let CROSSHAIRS_CIRCLE_INSET = (CROSSHAIRS_SIZE - CROSSHAIRS_CIRCLE_SIZE)/2
 
 class TargetView: UIView {
     var crosshairsLayer:CAShapeLayer?
@@ -22,19 +23,17 @@ class TargetView: UIView {
     override init(frame: CGRect) {
         super.init(frame: frame)
         // set transparent, so we still see the image
-        self.backgroundColor = UIColor.clearColor()
-        //self.alpha = 0.5
+        //self.backgroundColor = UIColor.clearColor()
         
         // create CAShapeLayer
         self.crosshairsLayer = CAShapeLayer()
         self.crosshairsLayer?.bounds = CGRectMake(0, 0, CROSSHAIRS_SIZE, CROSSHAIRS_SIZE)
         self.crosshairsLayer?.strokeColor = UIColor.blackColor().CGColor
         self.crosshairsLayer?.fillColor = UIColor.clearColor().CGColor
-        self.crosshairsLayer?.lineWidth = 3.0
+        self.crosshairsLayer?.lineWidth = 2.0
         self.crosshairsPath = UIBezierPath()
         drawCrossHairs()
-        self.crosshairsLayer?.position = CGPointMake(50, 50)
-        //self.crosshairsPath?.lineWidth = 1.0
+        self.crosshairsLayer?.position = CGPointMake(self.frame.size.width/2.0, self.frame.size.height/2.0)
         self.crosshairsLayer?.path = self.crosshairsPath?.CGPath
         self.layer.addSublayer(self.crosshairsLayer!)
 
@@ -42,14 +41,37 @@ class TargetView: UIView {
     }
     
     func drawCrossHairs() {
-        //let crossHairsColor = UIColor.whiteColor().CGColor
-        //let crossHairsPath = UIBezierPath()
-        let circlePath = UIBezierPath(ovalInRect: CGRectMake(0, 0, CROSSHAIRS_SIZE, CROSSHAIRS_SIZE))
-        
-        //circlePath.lineWidth = 5.0
-        
+        // circle part
+        let circlePathBox = CGRectInset((self.crosshairsLayer?.bounds)!, CROSSHAIRS_CIRCLE_INSET, CROSSHAIRS_CIRCLE_INSET);
+        let circlePath = UIBezierPath(ovalInRect: circlePathBox)
         circlePath.stroke()
         self.crosshairsPath!.appendPath(circlePath)
+        
+        // cross part
+        let crossVertPath = UIBezierPath()
+        var drawPt:CGPoint  // we move this point to draw the line
+        drawPt = CGPointMake((self.crosshairsLayer?.bounds.size.width)!/2.0, 0.0)
+        crossVertPath.moveToPoint(drawPt)
+        drawPt.y = (self.crosshairsLayer?.bounds.height)!
+        crossVertPath.addLineToPoint(drawPt)
+        
+        drawPt = CGPointMake(0.0, (self.crosshairsLayer?.bounds.size.height)!/2.0)
+        crossVertPath.moveToPoint(drawPt)
+        drawPt.x = (self.crosshairsLayer?.bounds.width)!
+        crossVertPath.addLineToPoint(drawPt)
+        
+        //let crossHorizPath:UIBezierPath = crossVertPath.copy() as! UIBezierPath // copy that vertical path
+        crossVertPath.stroke()
+        self.crosshairsPath!.appendPath(crossVertPath)
+        
+        // play with transforms
+        /*let currentTrans = self.crosshairsLayer?.transform
+        self.crosshairsLayer!.transform = CATransform3DRotate(currentTrans!, CGFloat(M_PI_2), 0.0, 0.0, 1.0)
+        crossHorizPath.stroke()
+        crosshairsPath!.appendPath(crossHorizPath) */
+        
+        
+        
         
     }
     
@@ -63,6 +85,15 @@ class TargetView: UIView {
         let touch = touches.first
         self.crosshairsPos = (touch?.locationInView(self))!
         print("touch position: \(self.crosshairsPos!.x),\(self.crosshairsPos!.y)")
+        // let CA pick animation speed
+        //self.crosshairsLayer?.position = self.crosshairsPos!;
+        // our own speed
+        let moveAnim = CABasicAnimation(keyPath: "position")
+        moveAnim.fromValue = NSValue(CGPoint: (self.crosshairsLayer?.position)!)
+        moveAnim.toValue = NSValue(CGPoint: self.crosshairsPos!)
+        moveAnim.duration = 2.0
+        self.crosshairsLayer?.position = self.crosshairsPos!
+        self.crosshairsLayer?.addAnimation(moveAnim, forKey: "position")
         
     }
 }
