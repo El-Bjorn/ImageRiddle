@@ -14,8 +14,6 @@ let CROSSHAIRS_CIRCLE_INSET = (CROSSHAIRS_SIZE - CROSSHAIRS_CIRCLE_SIZE)/2
 
 class TargetView: UIView {
     private var crosshairsLayer:CAShapeLayer
-    //private var crosshairsPath:UIBezierPath? // it's property so we can access it from drawrect
-   
     
     // Needed only to make xcode happy, we're using init(CGRect)
     required init?(coder aDecoder: NSCoder) {
