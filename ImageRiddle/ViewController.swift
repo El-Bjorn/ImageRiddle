@@ -3,7 +3,6 @@
 //  ImageRiddle
 
 import UIKit
-import QuartzCore
 
 class ViewController: UIViewController {
 
