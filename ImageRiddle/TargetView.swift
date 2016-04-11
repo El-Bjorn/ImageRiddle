@@ -34,7 +34,7 @@ class TargetView: UIView {
         self.crosshairsLayer.bounds = CGRectMake(0, 0, CROSSHAIRS_SIZE, CROSSHAIRS_SIZE)
         self.crosshairsLayer.position = CGPointMake(self.frame.size.width/2.0, self.frame.size.height/2.0)
         
-        self.crosshairsLayer.backgroundColor = UIColor.redColor().CGColor   // testing
+        self.crosshairsLayer.backgroundColor = UIColor.redColor().CGColor   // testing / show drawing on layer
         
         self.crosshairsLayer.strokeColor = UIColor.blackColor().CGColor // crosshairs drawing color
         self.crosshairsLayer.fillColor = UIColor.clearColor().CGColor   // we only want an outline
@@ -78,13 +78,7 @@ class TargetView: UIView {
             let crosshairsPos = touch.locationInView(self)
             print("touch position: \(crosshairsPos.x),\(crosshairsPos.y)")
             
-            // messing with animation speed
-            /*let moveAnim = CABasicAnimation(keyPath: "position")
-             moveAnim.fromValue = NSValue(CGPoint: (self.crosshairsLayer?.position)!)
-             moveAnim.toValue = NSValue(CGPoint: self.crosshairsPos!)
-             moveAnim.duration = 2.0 */
             self.crosshairsLayer.position = crosshairsPos
-            //self.crosshairsLayer?.addAnimation(moveAnim, forKey: "position")
             self.setNeedsDisplay()
         }
     }
