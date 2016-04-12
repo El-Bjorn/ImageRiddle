@@ -32,7 +32,7 @@ class TargetView: UIView {
         self.crosshairsLayer.bounds = CGRectMake(0, 0, CROSSHAIRS_SIZE, CROSSHAIRS_SIZE)
         self.crosshairsLayer.position = CGPointMake(self.frame.size.width/2.0, self.frame.size.height/2.0)
         
-        self.crosshairsLayer.backgroundColor = UIColor.redColor().CGColor   // testing / show drawing on layer
+        //self.crosshairsLayer.backgroundColor = UIColor.redColor().CGColor   // testing / show drawing on layer
         
         self.crosshairsLayer.strokeColor = UIColor.blackColor().CGColor // crosshairs drawing color
         self.crosshairsLayer.fillColor = UIColor.clearColor().CGColor   // we only want an outline

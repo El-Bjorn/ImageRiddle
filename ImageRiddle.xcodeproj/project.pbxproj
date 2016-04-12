@@ -14,7 +14,6 @@
 		409C47FA1CB4347500124EAB /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 409C47F81CB4347500124EAB /* LaunchScreen.storyboard */; };
 		409C48021CB4398000124EAB /* TargetView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 409C48011CB4398000124EAB /* TargetView.swift */; };
 		409C48041CB449C600124EAB /* Seasame-St-Characters.png in Resources */ = {isa = PBXBuildFile; fileRef = 409C48031CB449C600124EAB /* Seasame-St-Characters.png */; };
-		409C48061CB45D3D00124EAB /* Muppet_season_1.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 409C48051CB45D3D00124EAB /* Muppet_season_1.jpg */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -27,7 +26,6 @@
 		409C47FB1CB4347500124EAB /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		409C48011CB4398000124EAB /* TargetView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TargetView.swift; sourceTree = "<group>"; };
 		409C48031CB449C600124EAB /* Seasame-St-Characters.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Seasame-St-Characters.png"; sourceTree = "<group>"; };
-		409C48051CB45D3D00124EAB /* Muppet_season_1.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = Muppet_season_1.jpg; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -68,7 +66,6 @@
 				409C47FB1CB4347500124EAB /* Info.plist */,
 				409C48011CB4398000124EAB /* TargetView.swift */,
 				409C48031CB449C600124EAB /* Seasame-St-Characters.png */,
-				409C48051CB45D3D00124EAB /* Muppet_season_1.jpg */,
 			);
 			path = ImageRiddle;
 			sourceTree = "<group>";
@@ -133,7 +130,6 @@
 			files = (
 				409C48041CB449C600124EAB /* Seasame-St-Characters.png in Resources */,
 				409C47FA1CB4347500124EAB /* LaunchScreen.storyboard in Resources */,
-				409C48061CB45D3D00124EAB /* Muppet_season_1.jpg in Resources */,
 				409C47F71CB4347500124EAB /* Assets.xcassets in Resources */,
 				409C47F51CB4347500124EAB /* Main.storyboard in Resources */,
 			);
@@ -296,6 +292,7 @@
 				409C48001CB4347500124EAB /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
