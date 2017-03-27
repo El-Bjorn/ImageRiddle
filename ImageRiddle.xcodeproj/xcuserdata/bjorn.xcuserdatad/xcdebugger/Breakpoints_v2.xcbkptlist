@@ -10,13 +10,25 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "ImageRiddle/ViewController.swift"
-            timestampString = "481583331.85997"
+            timestampString = "482126677.696503"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "20"
-            endingLineNumber = "20"
+            startingLineNumber = "16"
+            endingLineNumber = "16"
             landmarkName = "viewDidLoad()"
-            landmarkType = "5">
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.SymbolicBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            symbolName = "CGPostError"
+            moduleName = "">
+            <Locations>
+            </Locations>
          </BreakpointContent>
       </BreakpointProxy>
    </Breakpoints>

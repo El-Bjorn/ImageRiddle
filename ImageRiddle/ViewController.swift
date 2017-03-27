@@ -16,7 +16,7 @@ class ViewController: UIViewController {
         if let imageView = self.riddleImageView {
             imageView.image = UIImage(named: "Seasame-St-Characters")
             
-            let targetViewFrame = CGRectMake(0, 0, imageView.frame.size.width, imageView.frame.size.height)
+            let targetViewFrame = CGRect(x: 0, y: 0, width: imageView.frame.size.width, height: imageView.frame.size.height)
             
             self.targetView = TargetView(frame: targetViewFrame)
             if (self.targetView != nil) {
@@ -25,7 +25,7 @@ class ViewController: UIViewController {
         }
     }
     
-    @IBAction func positionSelectedButton(sender: UIButton) {
+    @IBAction func positionSelectedButton(_ sender: UIButton) {
     }
 
 

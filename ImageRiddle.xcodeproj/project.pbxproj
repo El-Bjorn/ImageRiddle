@@ -102,6 +102,8 @@
 				TargetAttributes = {
 					409C47EB1CB4347500124EAB = {
 						CreatedOnToolsVersion = 7.2.1;
+						DevelopmentTeam = UW2GS3TVL4;
+						LastSwiftMigration = 0820;
 					};
 				};
 			};
@@ -255,10 +257,12 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				DEVELOPMENT_TEAM = UW2GS3TVL4;
 				INFOPLIST_FILE = ImageRiddle/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.builtlight.ImageRiddle;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
 			};
 			name = Debug;
 		};
@@ -266,10 +270,12 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				DEVELOPMENT_TEAM = UW2GS3TVL4;
 				INFOPLIST_FILE = ImageRiddle/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.builtlight.ImageRiddle;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
 			};
 			name = Release;
 		};
